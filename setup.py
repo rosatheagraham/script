@@ -14,12 +14,14 @@ data_files = [("Microsoft.VC90.CRT", glob(r'C:\Users\user\Desktop\script\Microso
 ("templates", glob(r'C:\Users\user\Desktop\script\templates\*.*')),
 (".", glob(r'C:\Users\user\AppData\Local\Programs\Python\Python39\Lib\site-packages\Python.Runtime.dll'))]
 
-options = {'includes': ['sqlalchemy.sql.default_comparator','lxml._elementpath']}
+#options = {'includes': ['lxml._elementpath']}
 
-options = {
-            'py2exe':options,
-        }
+#options = {
+#           'py2exe':options,
+#       }
         
-setup(options=options,data_files=data_files,windows=['script.py'])
+#setup(options=options,data_files=data_files,windows=['script.py'])
+
+setup(data_files=data_files,windows=['script.py'])
 
 #setup(console=['script.py'])
