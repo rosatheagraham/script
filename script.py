@@ -1,24 +1,10 @@
-import time
-
-from datetime import datetime
-
-#flask
 from flask import Flask,render_template,redirect,url_for,request
-
 import webview
-
-
 import threading
-
-import os
-
 import sys
-
 from win32api import GetSystemMetrics
 
-
 app = Flask(__name__)
-
 
 @app.route("/")
 def index():
@@ -37,10 +23,8 @@ settings.update({
     'persist_session_cookies': True
 })
 
-
 def start_server():
     app.run(host='127.0.0.1', port=5000)
-
 
 if __name__ == "__main__":
 
